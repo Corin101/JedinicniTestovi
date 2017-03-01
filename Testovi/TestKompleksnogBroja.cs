@@ -40,7 +40,21 @@ namespace Testovi
             KompleksniBroj kb2 = new KompleksniBroj(7, 9);
             Assert.AreEqual(16, (kb1 + kb2).imaginarniDio);
         }
+        [TestMethod]
+        public void OduzmiDvaKompleksnaBrojaDajeKompleksniBrojSRealnimDjelomJednakimZbrojuRealnihDijelova()
+        {
+            KompleksniBroj kb1 = new KompleksniBroj(4, 7);
+            KompleksniBroj kb2 = new KompleksniBroj(7, 9);
+            Assert.AreEqual(-3, (kb1 - kb2).realniDio);
+        }
 
+        [TestMethod]
+        public void OduzmiDvaKompleksnaBrojaDajeKompleksniBrojSImaginarnimDjelomJednakimZbrojuImaginarnihDijelova()
+        {
+            KompleksniBroj kb1 = new KompleksniBroj(4, 7);
+            KompleksniBroj kb2 = new KompleksniBroj(7, 9);
+            Assert.AreEqual(-2, (kb1 - kb2).imaginarniDio);
+        }
 
     }
 }
